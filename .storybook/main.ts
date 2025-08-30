@@ -4,26 +4,29 @@ import path from 'path';
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+
   addons: [
     '@chromatic-com/storybook',
     '@storybook/addon-docs',
     '@storybook/addon-a11y',
     '@storybook/addon-vitest',
   ],
+
   framework: {
     name: '@storybook/react-vite',
     options: {},
   },
-  // docs: {
-  //   autodocs: 'tag',
-  // },
+
   viteFinal: async (config) => {
     config.plugins?.push(
       /** @see https://github.com/aleclarson/vite-tsconfig-paths */
       tsconfigPaths({
-        projects: [path.resolve(path.dirname(__dirname), 'tsconfig-json')],
+        projects: [path.resolve(path.dirname(__dirname), 'tsconfig-app-json')],
       })
     );
+    config.optimizeDeps = {
+      include: ['@storybook/addon-docs'],
+    };
     return config;
   },
 };

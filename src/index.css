@@ -1,1 +1,6 @@
 @import 'tailwindcss';
+@config "../tailwind.config.js";
+
+/* @theme {
+  --color-primary: var(--color-blue-500);
+} */
