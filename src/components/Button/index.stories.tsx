@@ -17,6 +17,21 @@ type Story = StoryObj<typeof meta>;
 export const Solid: Story = {
   args: {
     variant: 'solid',
+    size: 'md',
+    children: 'Button',
+  },
+};
+
+export const Secondary: Story = {
+  args: {
+    variant: 'secondary',
+    children: 'Button',
+  },
+};
+
+export const Destructive: Story = {
+  args: {
+    variant: 'destructive',
     children: 'Button',
   },
 };
@@ -31,6 +46,13 @@ export const Outline: Story = {
 export const Ghost: Story = {
   args: {
     variant: 'ghost',
+    children: 'Button',
+  },
+};
+
+export const Link: Story = {
+  args: {
+    variant: 'link',
     children: 'Button',
   },
 };
