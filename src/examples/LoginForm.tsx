@@ -59,7 +59,7 @@ export const LoginForm = () => {
           className='mb-8'
         />
 
-        <Button type='submit' variant={'solid'} className='mb-4'>
+        <Button type='submit' variant={'primary'} className='mb-4'>
           Login
         </Button>
       </Stack>

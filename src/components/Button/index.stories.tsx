@@ -14,9 +14,9 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Solid: Story = {
+export const Primary: Story = {
   args: {
-    variant: 'solid',
+    variant: 'primary',
     size: 'md',
     children: 'Button',
   },

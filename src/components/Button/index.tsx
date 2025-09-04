@@ -7,14 +7,14 @@ const buttonStyles = cva(
   {
     variants: {
       variant: {
-        solid: 'text-white bg-primary-500 hover:bg-primary-600',
+        primary: 'text-white bg-primary-500 hover:bg-primary-600',
         secondary: 'text-black bg-gray-100 hover:bg-gray-200',
         destructive: 'text-white bg-red-500 hover:bg-red-600',
         outline:
-          'border-2 text-primary-600 border-primary-500 bg-transparent hover:bg-primary-100',
+          'border-2 text-black border-gray-200 bg-transparent hover:bg-gray-100',
         ghost:
-          'text-primary-600 bg-transparent hover:bg-primary-100 transition-colors duration-300',
-        link: 'text-primary-600 bg-transparent hover:underline',
+          'text-black bg-transparent hover:bg-gray-100 transition-colors duration-300',
+        link: 'text-black bg-transparent hover:underline',
       },
       size: {
         sm: 'px-3 py-1 text-sm',
@@ -23,7 +23,7 @@ const buttonStyles = cva(
       },
     },
     defaultVariants: {
-      variant: 'solid',
+      variant: 'primary',
       size: 'md',
     },
   }
