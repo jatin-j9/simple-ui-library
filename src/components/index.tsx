@@ -6,3 +6,4 @@ export * from './Layout';
 export * from './Slider';
 export * from './Tabs';
 export * from './Text';
+export * from './Tooltip';
