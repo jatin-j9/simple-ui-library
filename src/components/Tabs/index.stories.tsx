@@ -10,7 +10,7 @@ const meta: Meta<typeof Tabs> = {
     docs: {
       description: {
         component:
-          'A set of layered sections of content—known as tab panels—that are displayed one at a time. Includes full keyboard navigation and accessibility support.',
+          'A navigation component that organizes related content into separate views.',
       },
     },
   },

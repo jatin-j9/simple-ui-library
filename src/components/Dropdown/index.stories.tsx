@@ -13,6 +13,12 @@ const meta: Meta<typeof Dropdown> = {
   component: Dropdown,
   parameters: {
     layout: 'centered',
+    docs: {
+      description: {
+        component:
+          'A collapsible menu for selecting actions or options from a list.',
+      },
+    },
   },
   tags: ['autodocs'],
 };

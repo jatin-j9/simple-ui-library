@@ -15,6 +15,12 @@ const meta: Meta<typeof Dialog> = {
   component: Dialog,
   parameters: {
     layout: 'centered',
+    docs: {
+      description: {
+        component:
+          'A modal overlay that captures user attention for confirmations, forms, or important information.',
+      },
+    },
   },
   tags: ['autodocs'],
   argTypes: {

@@ -6,6 +6,11 @@ const meta: Meta<typeof Input> = {
   component: Input,
   parameters: {
     layout: 'centered',
+    docs: {
+      description: {
+        component: 'A text field that lets users enter and edit information.',
+      },
+    },
   },
   tags: ['autodocs'],
 };

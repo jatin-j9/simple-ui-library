@@ -6,6 +6,12 @@ const meta: Meta<typeof Text> = {
   component: Text,
   parameters: {
     layout: 'centered',
+    docs: {
+      description: {
+        component:
+          'A typography component for rendering styled text with customizable appearance.',
+      },
+    },
   },
   tags: ['autodocs'],
 };
