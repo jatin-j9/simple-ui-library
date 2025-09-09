@@ -47,7 +47,7 @@ const sampleProduct: Product = {
 export const ProductCard = () => {
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
   const [quantity, setQuantity] = useState(1);
-  const [selectedAction, setSelectedAction] = useState('');
+  const [, setSelectedAction] = useState('');
   const [isAddedToCart, setIsAddedToCart] = useState(false);
 
   const handleAddToCart = () => {

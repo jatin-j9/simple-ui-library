@@ -17,10 +17,10 @@ interface DropdownContextType {
   isOpen: boolean;
   setIsOpen: (open: boolean) => void;
   activeIndex: number;
-  setActiveIndex: (index: number) => void;
+  setActiveIndex: React.Dispatch<React.SetStateAction<number>>;
   itemsCount: number;
   setItemsCount: (count: number) => void;
-  triggerRef: React.RefObject<HTMLButtonElement>;
+  triggerRef: React.RefObject<HTMLButtonElement | null>;
 }
 
 const DropdownContext = createContext<DropdownContextType | null>(null);
@@ -46,7 +46,7 @@ export const Dropdown = ({
   onOpenChange,
 }: DropdownProps) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
-  const [activeIndex, setActiveIndex] = useState(-1);
+  const [activeIndex, setActiveIndex] = useState<number>(-1);
   const [itemsCount, setItemsCount] = useState(0);
   const triggerRef = useRef<HTMLButtonElement>(null);
 

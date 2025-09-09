@@ -59,7 +59,7 @@ interface DialogProps extends VariantProps<typeof dialogContentStyles> {
 }
 
 export const Dialog = forwardRef<HTMLDivElement, DialogProps>(
-  ({ open, onOpenChange, children, size, className }, ref) => {
+  ({ open, onOpenChange, children, size, className }) => {
     const overlayRef = useRef<HTMLDivElement>(null);
     const contentRef = useRef<HTMLDivElement>(null);
 
