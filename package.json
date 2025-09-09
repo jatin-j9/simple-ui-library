@@ -1,8 +1,19 @@
 {
   "name": "simple-ui-library",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/simple-ui-library-umd.cjs",
+  "module": "dist/simple-ui-library.js",
+  "exports": {
+    ".": {
+      "import": "./dist/simple-ui-library.js",
+      "require": "./dist/simple-ui-library-umd.cjs"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -44,6 +55,7 @@
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.39.1",
     "vite": "^7.1.2",
+    "vite-plugin-dts": "^4.5.4",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.2.4"
   }
