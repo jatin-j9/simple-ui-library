@@ -9,21 +9,19 @@ import dts from 'vite-plugin-dts';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { storybookTest } from '@storybook/addon-vitest/vitest-plugin';
-const dirname =
-  typeof __dirname !== 'undefined'
-    ? __dirname
-    : path.dirname(fileURLToPath(import.meta.url));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      '@': path.resolve(__dirname, 'src'),
     },
   },
   build: {
     lib: {
-      entry: path.resolve(__dirname, './src/components/index.tsx'),
+      entry: path.resolve(__dirname, 'src/components/index.tsx'),
       name: 'SimpleUILibrary',
       fileName: 'simple-ui-library',
     },
@@ -41,7 +39,10 @@ export default defineConfig({
     react(),
     tailwindcss(),
     tsconfigPaths(),
-    dts({ rollupTypes: true }),
+    dts({
+      rollupTypes: true,
+      tsconfigPath: './tsconfig.dts.json',
+    }),
   ],
   test: {
     projects: [
@@ -51,7 +52,7 @@ export default defineConfig({
           // The plugin will run tests for the stories defined in your Storybook config
           // See options at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon#storybooktest
           storybookTest({
-            configDir: path.join(dirname, '.storybook'),
+            configDir: path.join(__dirname, '.storybook'),
           }),
         ],
         test: {
